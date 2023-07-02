@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/8053bb38c6.js" crossorigin="anonymous"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="https://longlivemox.com/icon-img" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahmoud Sayed</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+<body>
+    <script>
+        const sound = new Howl({
+          src: ['./music.mp3']
+        });
+        window.addEventListener('load', function() {
+          sound.play();
+        });
+      </script>
+
+    <div class="banner">
+        <div id="banner-img"></div>
+        
+    </div>
+    <div class="main-img">
+        <div class="img-main"></div>
+    </div>
+    <div class="secui">
+    <div class="text-sec">
+        <div class="name">Mahmoud Sayed</div>
+        <div class="tag">@mahmovdsayed</div>
+        <div class="addr">Maadi, Cairo, Egypt</div>
+        <div class="job">Full-Stack Developer</div>
+        <p id="depolna"></p>
+    </div>
+    <div class="buttons">
+        <a id="btn" href="https://instagram.com/mahmovdsayed"><i class="fa-brands fa-instagram" style="color: black;"></i>Instagram</a>
+        <a id="btn" href="https://www.facebook.com/profile.php?id=100006975616179&mibextid=ZbWKwL"><i class="fa-brands fa-facebook" style="color: black;"></i>Facebook</a>
+        <a id="btn" href="https://twitter.com/mahmovdsayed"><i class="fa-brands fa-twitter" style="color: black;"></i>twitter</a>
+        <a id="btn" href="https://www.snapchat.com/add/mahmovdsayed?share_id=dRx7CaHl1Wc&locale=en-US"><i class="fa-brands fa-snapchat" style="color: black;"></i>SnapChat</a>
+        <a id="btn" href="https://open.spotify.com/user/31qdq5r5azngvj4a5ukuporwf25u?si=b827150edafe4e7e"><i class="fa-brands fa-spotify" style="color: black;"></i>Spotify</a>
+        <a id="btn" href="https://tiktok.com/@mahmovdsayed"><i class="fa-brands fa-tiktok" style="color: black;"></i>TiKToK</a>
+        <a id="btn" href="https://instagram.com/depolna"><i class="fa-brands fa-instagram" style="color: black;"></i>Depolna</a>
+        <a id="btn" href="#"><i class="fa-solid fa-envelope" ></i>Email</a>
+        
+    </div>
+    
+    
+
+    <footer>
+      
+
+        <div class="depolna">
+            powered by <img class="depolna-img" src="https://longlivemox.com/Depolna.png" alt="depolna">
+        </div>
+    </footer>
+
+
+    <script>
+var depolna = new Date("Aug 18, 2023 15:37:25").getTime();
+var x = setInterval(function() {
+var now = new Date().getTime();
+var t = depolna - now;
+var days = Math.floor(t / (1000 * 60 * 60 * 24));
+var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+var seconds = Math.floor((t % (1000 * 60)) / 1000);
+document.getElementById("depolna").innerHTML = days + "d " 
++ hours + "h " + minutes + "m " + seconds + "s ";
+    if (t < 0) {clearInterval(x);document.getElementById("depolna").innerHTML = "EXPIRED";}},1);
+    </script>
+    
+    <script>
+        let colorInput = document.querySelector('#color');
+        let hex = document.querySelector('#hex');
+        colorInput.addEventListener('input', () => {
+            let color = colorInput.value;
+            hex.value = color;
+            let moInt = document.querySelector('#banner-img');
+           document.querySelector("#banner-img").style.backgroundColor = color
+        })
+    </script>
+
+ 
+</body>
+</html>
